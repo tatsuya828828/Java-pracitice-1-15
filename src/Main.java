@@ -38,6 +38,15 @@ public class Main {
 		System.out.println("文字列s5の4文字目以降は"+s5.substring(3));
 		// 位置指定8文字目は含まれない
 		System.out.println("文字列s5の4~8文字目は"+s5.substring(3,8));
+
+		// StringBuilderクラスを用いた文字連結
+		// +演算子よりも高速で処理できるが数回程度の文字連結であればあまり変わらない
+		StringBuilder sb = new StringBuilder();
+		for(int i=0; i<10; i++) {
+			sb.append("Java");
+		}
+		String s6 = sb.toString();
+		System.out.println(s6);
 	}
 
 }
