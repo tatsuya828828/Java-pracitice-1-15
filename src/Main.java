@@ -1,6 +1,24 @@
 
 public class Main {
+	public static boolean isVaildPlayerName(String name) {
+		// [a-z]: a~zのいずれかの文字が含まれるかの判定
+		// {n}: 直前の文字のn回の繰り返し
+		return name.matches("[A-Z][A-Z0-9]{7}");
+	}
+
 	public static void main(String[] args) {
+		System.out.println(isVaildPlayerName("AIUEO123"));
+
+		String s0 = "abc,def:ghi";
+		// 文字列の分割
+		String[] words = s0.split("[,:]");
+		for(String w:words) {
+			System.out.println(w+"->");
+		}
+		// 文字列の置換
+		String w = s0.replaceAll("[beh]","X");
+		System.out.println(w);
+
 		String s1 = "スッキリJava";
 		String s2 = "Java";
 		String s3 = "java";
@@ -48,5 +66,4 @@ public class Main {
 		String s6 = sb.toString();
 		System.out.println(s6);
 	}
-
 }
