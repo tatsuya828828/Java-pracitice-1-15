@@ -6,8 +6,13 @@ public class Main {
 		return name.matches("[A-Z][A-Z0-9]{7}");
 	}
 
+	static final String FORMAT = "%-9s %-13s 所持金%,6d";
+	static String s7 = String.format(FORMAT, Hero.getName(), Hero.getJob(), Hero.getGold());
+
 	public static void main(String[] args) {
 		System.out.println(isVaildPlayerName("AIUEO123"));
+
+		System.out.println(s7);
 
 		String s0 = "abc,def:ghi";
 		// 文字列の分割
